@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irah Reese Lizardo - E-Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Gentium Plus Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" rel="stylesheet">
+    <!-- League Spartan Font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero">
+        <header class="header">
+            <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="hero-container">
+            <div class="row w-100 align-items-center g-4">
+                <div class="col-12 col-lg-6 hero-image d-flex justify-content-center order-1 order-lg-2">
+                    <img src="images/TOGA.jpg" alt="Irah Reese Lizardo">
+                </div>
+                <div class="col-12 col-lg-6 hero-content order-2 order-lg-1">
+                    <p class="hero-text">
+                        A Bachelor of Science in Information Technology graduate from the Technological Institute of the Philippines. 
+                        <strong>Irah Reese Lizardo</strong> is a Manila-based problem solver who transforms 
+                        <strong>complex challenges</strong> into <strong>creative and impactful solutions</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container-fluid px-4 px-md-5">
+            <h2 class="section-title mb-5">PROJECTS</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <a href="project1-detail.html" style="text-decoration: none; color: inherit; width: 100%;">
+                        <div class="project-card">
+                            <div class="project-mockup">
+                                <div class="mockup-placeholder">
+                                    <img src="images/Project1.png" alt="Project 1">
+                                </div>
+                            </div>
+                            <h3>E-Responde</h3>
+                            <p>E-Responde is a smart emergency alert and crime reporting system designed to improve community safety and emergency response. It allows users to send real-time crime reports and SOS alerts through a mobile app and smartwatch, while helping law enforcement monitor incidents, detect threats, and respond more efficiently through a web-based dashboard.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="project-card" style="width: 100%;">
+                        <div class="project-mockup">
+                            <div class="mockup-placeholder">
+                                <img src="images/Project1.png" alt="Project 1">
+                            </div>
+                        </div>
+                        <h3>PROJECT TITLE</h3>
+                        <p>Project Brief Description</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CALL-TO-ACTION SECTION -->
+    <section class="cta">
+        <div class="cta-content">
+            <p class="cta-question">Liking the vibe?</p>
+            <h2 class="cta-title">LET'S WORK ON<br>WHAT'S NEXT.</h2>
+            <div class="cta-buttons">
+                <a href="resume.pdf" class="btn btn-primary" download>Resume</a>
+                <a href="https://www.linkedin.com/in/irah-reese-lizardo-a50145398" class="btn btn-primary" target="_blank">LinkedIn</a>
+            </div>
+            <p class="cta-email"><a href="mailto:irahlzrd@gmail.com" style="text-decoration: none; color: inherit;">irahlzrd@gmail.com</a></p>
+        </div>
+        <footer class="footer">
+            <div class="footer-logo"><img src="images/logo.png" alt="Logo"></div>
+        </footer>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 80) {
+                document.querySelector('.header').classList.add('hidden');
+            } else {
+                document.querySelector('.header').classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>

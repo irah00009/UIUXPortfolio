@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Responde - Irah Reese Lizardo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* SECTION 1 */
+        .project-detail-hero {
+            background: #8F9EBB;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .project-detail-hero .header {
+            flex-shrink: 0;
+        }
+
+        .project-mockup-top {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 50px 0;
+            overflow: hidden;
+        }
+
+        .project-mockup-top img {
+            max-height: 52vh;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .project-detail-info {
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            padding: 30px 60px;
+            flex-shrink: 0;
+        }
+
+        .project-meta-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .meta-value {
+            font-size: 15px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .view-prototype-btn {
+            display: inline-block;
+            padding: 10px 32px;
+            background: transparent;
+            color: #333;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid #333;
+            cursor: pointer;
+            align-self: center;
+            margin-top: 6px;
+        }
+
+        .view-prototype-btn:hover {
+            background: #333;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .project-text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text-section h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-family: 'League Spartan', sans-serif;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        /* PROBLEM & SOLUTION */
+        .problem-solution {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .problem {
+            background: #2C3E50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            text-align: center;
+            min-height: 50vh;
+        }
+
+        .problem-content, .solution-content {
+            max-width: 500px;
+        }
+
+        .problem h2, .solution h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .problem p, .solution p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .solution {
+            background: #B8C9E0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            text-align: center;
+            min-height: 50vh;
+        }
+
+        /* TESTING & RESULTS */
+        .testing-results {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testing {
+            background: #f8f9fa;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            min-height: 50vh;
+        }
+
+        .testing-content, .results-content {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .testing h2, .results h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .testing p, .results p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .results {
+            background: #ffffff;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            min-height: 50vh;
+        }
+
+        /* FINAL PROTOTYPE */
+        .final-prototype {
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 50px;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .prototype-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .prototype-content h2 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            font-family: 'Gentium Plus', serif;
+            color: #333;
+        }
+
+        .prototype-image {
+            max-width: 1000px;
+            margin: 16px auto 0;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .prototype-image img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+        }
+
+        .prototype-image img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* FINAL THOUGHTS */
+        .final-thoughts {
+            background: #9EB2D8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            color: #000000;
+        }
+
+        .thoughts-content {
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .thoughts-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .thoughts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .thought-item h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .thought-item p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .project-detail-hero {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .project-mockup-top {
+                padding: 20px 30px 0;
+            }
+
+            .project-mockup-top img {
+                max-height: 40vh;
+            }
+
+            .project-detail-info {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 24px 30px;
+            }
+
+            .thoughts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem h2, .solution h2,
+            .testing h2, .results h2,
+            .final-prototype h2,
+            .thoughts-content h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-mockup-top {
+                padding: 16px 20px 0;
+            }
+
+            .project-detail-info {
+                padding: 20px;
+            }
+
+            .project-text-section h1 {
+                font-size: 26px;
+            }
+
+            .problem, .solution, .testing, .results, .final-thoughts {
+                padding: 60px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECTION 1: PROJECT OVERVIEW -->
+    <section class="project-detail-hero">
+        <header class="header">
+            <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+            <nav class="nav">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="project-mockup-top">
+            <img src="images/final Prototype1.png" alt="Project Mockups">
+        </div>
+
+        <div class="project-detail-info">
+            <div class="project-meta-section">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">PROJECT DURATION</div>
+                        <div class="meta-value">100 hours</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">ROLE</div>
+                        <div class="meta-value">UI / UX Design and Frontend Developer</div>
+                    </div>
+                </div>
+                <a href="https://www.figma.com/proto/xdVXzN1MNTLAnsJ8yLgo7w/E-Responde-Prototype?node-id=1-5&t=lMHOTdE9pqGj6t53-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5" class="view-prototype-btn" target="_blank">VIEW PROTOTYPE</a>
+            </div>
+
+            <div class="project-text-section">
+                <h1>E-Responde</h1>
+                <p class="project-description">E-Responde is a smart emergency alert and crime reporting system designed to improve community safety and emergency response. It allows users to send real-time crime reports and SOS alerts through a mobile app and smartwatch, while helping law enforcement monitor incidents, detect threats, and respond more efficiently.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 & 3: PROBLEM & SOLUTION -->
+    <section class="problem-solution">
+        <div class="problem">
+            <div class="problem-content">
+                <h2>THE PROBLEM</h2>
+                <p>Lost or misplaced reports due to paper-based systems, fear of reporting, false or fake cases, lack of communication between residents and authorities, and difficulty in tracking and managing reported cases.</p>
+            </div>
+        </div>
+        <div class="solution">
+            <div class="solution-content">
+                <h2>THE SOLUTION</h2>
+                <p>E-Responde bridges the gap with instant mobile and smartwatch alerts, real-time location tracking, and a unified dashboard for law enforcement. This reduces response times, improves coordination, and enhances community safety through seamless digital communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 & 5: TESTING & RESULTS -->
+    <section class="testing-results">
+        <div class="testing">
+            <div class="testing-content">
+                <h2>TESTING & ITERATIONS</h2>
+                <p>Through site visits and user testing with police officers and community residents, I refined the interface based on real user behavior and feedback. The onboarding flow was redesigned to improve notification setup, while the crime report form was modeled after actual police documentation to reduce officer learning time. Final UAT results from 53 respondents showed near-perfect scores in learnability and navigation, while lower-end device performance and contextual help were identified for future improvements.</p>
+            </div>
+        </div>
+        <div class="results">
+            <div class="results-content">
+                <h2>RESULTS</h2>
+                <p>User acceptance testing across 53 respondents — including police officers, barangay officials, IT professionals, and community members — resulted in an overall Strongly Agree rating across all ISO/IEC 25010 quality standards. Functional usefulness scored a perfect 5.0/5, interaction capability rated 4.84/5, and security rated 4.85/5. , and officers reported significantly improved situational awareness through the real-time dashboard and live dispatch tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FINAL PROTOTYPE -->
+    <section class="final-prototype">
+        <div class="prototype-content">
+            <h2>FINAL PROTOTYPE</h2>
+            <a href="https://www.figma.com/proto/xdVXzN1MNTLAnsJ8yLgo7w/E-Responde-Prototype?node-id=1-5&t=lMHOTdE9pqGj6t53-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5" class="view-prototype-btn" target="_blank" style="margin-top: 30px;">VIEW FINAL VERSION</a>
+            <div class="prototype-image" style="margin-top: 50px;">
+                <img src="images/FinalPrototype.png" alt="Final Prototype">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FINAL THOUGHTS -->
+    <section class="final-thoughts">
+        <div class="thoughts-content">
+            <h2>FINAL THOUGHTS</h2>
+            <div class="thoughts-grid">
+                <div class="thought-item">
+                    <h3>What I Learned</h3>
+                    <p>Designing for emergency services taught me the importance of clarity under pressure. I learned how to balance feature richness with simplicity, and how user research with real stakeholders can uncover critical insights that transform a design from good to life-saving.</p>
+                </div>
+                <div class="thought-item">
+                    <h3>What I'm Most Proud Of</h3>
+                    <p>I'm most proud of creating a system that prioritizes accessibility and speed without compromising on design. Seeing first responders and community members embrace the solution and understand how it could make a real difference in emergency situations was incredibly rewarding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: CALL-TO-ACTION -->
+    <section class="cta">
+        <div class="cta-content">
+            <p class="cta-question">Liking the vibe?</p>
+            <h2 class="cta-title">LET'S WORK ON<br>WHAT'S NEXT.</h2>
+            <div class="cta-buttons">
+                <a href="resume.pdf" class="btn btn-primary" download>Resume</a>
+                <a href="https://www.linkedin.com/in/irah-reese-lizardo-a50145398" class="btn btn-primary" target="_blank">LinkedIn</a>
+            </div>
+            <p class="cta-email"><a href="mailto:irahlzrd@gmail.com" style="text-decoration: none; color: inherit;">irahlzrd@gmail.com</a></p>
+        </div>
+        <footer class="footer">
+            <div class="footer-logo"><img src="images/logo.png" alt="Logo"></div>
+        </footer>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 80) {
+                document.querySelector('.header').classList.add('hidden');
+            } else {
+                document.querySelector('.header').classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>
